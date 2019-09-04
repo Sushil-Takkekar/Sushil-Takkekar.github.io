@@ -1,0 +1,25 @@
+/**
+* This file contains all the variables used within all other '.scss' files.
+*/
+
+/* color variables */
+$main-color: #c2f7b8; // #c5ffbb; 
+$main-color-bg: #49a74d;
+
+$primary-color : #252525;
+$primary-color-bg : #e0e0e0;
+
+$light-color: white; //rgb(235, 235, 235);
+$light-color-bg: white; //rgb(235, 235, 235);
+
+$dark-color: rgb(29, 29, 29);
+$dark-color-bg: rgb(33, 33, 33);
+
+$danger-color: rgb(255, 136, 136);
+$success-color: green;
+
+$form-item-border-color: #bdbdbd;
+
+/* window size variables */
+$max-width: 1100px;
+$min-width: 700px;

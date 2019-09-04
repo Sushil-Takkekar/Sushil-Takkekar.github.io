@@ -1,0 +1,132 @@
+/**
+* This file is required for reponsive site experience.
+*/
+
+/**
+* Level - 1 
+**/
+@media (max-width: 1200px) {
+    /* change vars */
+    $side-nav-width : 13rem;
+    
+    /* container */
+    .dashboard-container {
+        .side-nav {
+            width: $side-nav-width;
+            font-size: 0.9rem;
+        }
+        .tasks {
+            margin-left: $side-nav-width;
+            .heading {
+                font-size: 1rem;
+            }
+            .task-item {
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    /* Text styles */
+    .x-large {
+        font-size: 2rem;
+    }
+    .large {
+        font-size: 1.5rem;
+    }
+    .regular-title {
+        font-size: 1.3rem;
+    }
+    .lead {
+        font-size: 1rem;
+    }
+
+    /* profile page */
+    .profile-grid {
+        .profile-about {
+            .skills-section .skills {
+                grid-template-columns: 2fr 2fr 2fr;
+            }
+        }
+    }
+}
+
+/**
+* Level - 2 
+**/
+@media (max-width: 900px) {
+    /* DO NOT SHOW Dashboard below 900px */
+    .dashboard-container {
+        display: none;
+    }
+    .resolution-error {
+        display: block; 
+    }
+}
+
+/**
+* Level - 3
+**/
+@media (max-width: 750px) {
+    /* change vars */
+    $side-nav-width : 13rem;
+
+    /* remove navbar icon text */
+    .hide-sm {
+        display: none;
+    }
+
+    /* Text styles */
+    .x-large {
+        font-size: 2rem;
+    }
+    .large {
+        font-size: 1.5rem;
+    }
+    .regular-title {
+        font-size: 1.3rem;
+    }
+    .lead {
+        font-size: 1rem;
+    }
+
+    /* Navbar */
+    .navbar {
+        display: block;
+        text-align: center;
+        ul {
+            text-align: center;
+            justify-content: center;
+        }
+    }
+
+    /* container */
+    .container {
+        margin-top: 8rem;
+    }
+    .dashboard-container {
+        margin-top: 6.8rem;
+        .side-nav {
+            top: 6.8rem;
+            width: $side-nav-width;
+        }
+        .tasks {
+            margin-left: $side-nav-width;
+        }
+    }
+
+    /* profile page */
+    .profile-grid {
+        grid-template-areas: 'top' 'about' 'exp' 'edu' 'github';
+        .profile-about {
+            .skills-section .skills {
+                grid-template-columns: 2fr;
+            }
+        }
+        .profile-exp > .exp-item .company {
+            font-size: 1.2rem;
+        }
+        .profile-edu > .edu-item .university {
+            font-size: 1.2rem;
+        }
+    }
+}

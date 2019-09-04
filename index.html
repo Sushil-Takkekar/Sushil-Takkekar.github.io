@@ -1,6 +1,196 @@
 <!DOCTYPE html>
-<html>
-	<body>
-		<h2><i>My profile page</i></h2>
-	</body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet">
+    <!-- icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    
+    <link rel="stylesheet" href="./css/style.min.css">
+    <title>Profile</title>
+</head>
+<body>
+    <nav class="navbar bg-dark">
+        <h1 class="logo">
+            <!-- <a href="index.html"> -->
+                <!-- <i class="material-icons">vertical_split</i> -->
+                <!-- <img src="https://img.icons8.com/plasticine/100/000000/checkmark.png">
+                <span>Task Mgr</span> -->
+            <!-- </a> -->
+        </h1>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="https://drive.google.com/file/d/1AGW6csAb6wRZ2XbO4NKkRYQ3U8wKnhXKC/view?usp=sharing" target="_blank">Resume</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home tab -->
+    <section class="landing">
+        <!-- <div class="dark-overlay"></div> -->
+    </section>
+
+    <!-- About tab -->
+    <section id="about" class="container">
+        <!-- <div class="edit-profile-btn">
+            <a href="#" class="btn btn-edit">Get Resume</a>
+        </div> -->
+        <div id="top-margin"></div>
+        <div class="profile-grid my-1">
+            <!-- Top -->
+            <div class="profile-top bg-main-color">
+                <img class="round-img" src="https://avatars3.githubusercontent.com/u/19914270?s=400&u=f8490911d07196949b9b1f72202105229b38c4d6&v=4" alt="" />
+                <h1 class="large">Sushil Takkekar</h1>
+                <p class="lead">Consultant at TIBCO</p>
+                <p>Navi Mumbai, India</p>
+                <div class="icons social-media">
+                    <a href="#"><img src="https://www.gstatic.com/images/icons/material/system/2x/post_facebook_black_24dp.png" /></a>
+                    <a href="#"><img src="https://www.gstatic.com/images/icons/material/system/2x/post_twitter_black_24dp.png" /></a>
+                    <a href="#"><img src="https://www.gstatic.com/images/icons/material/system/2x/post_gplus_black_24dp.png" /></a>
+                </div>
+            </div>
+            <!-- About -->
+            <div class="profile-about bg-primary p-2">
+                <div class="bio-section">
+                    <h2 class="title regular-title text-main-color">Bio</h2>
+                    <p class="lead">
+                        A FullStack developer, 
+                        who can build the web-applications to solve the real-world problems with greater efficiency using suitable technology stack.
+                    </p>
+                </div>
+                <div class="horz-line"></div> <!-- Line separator -->
+                <div class="skills-section">
+                    <div class="title text-main-color"><h2 class="regular-title">Skills</h2></div>
+                    <div class="skills">
+                        <div class="skill-item"><i class="material-icons">done</i>
+                            HTML
+                        </div>
+                        <div class="skill-item"><i class="material-icons">done</i>
+                            CSS
+                        </div>
+                        <div class="skill-item"><i class="material-icons">done</i>
+                            Javascript
+                        </div>
+                        <div class="skill-item"><i class="material-icons">done</i>
+                            ReactJs
+                        </div>
+                        <div class="skill-item"><i class="material-icons">done</i>
+                            NodeJs
+                        </div>
+                        <div class="skill-item"><i class="material-icons">done</i>
+                            ExpressJs
+                        </div>
+                        <div class="skill-item"><i class="material-icons">done</i>
+                            MongoDB
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience -->
+            <div class="profile-exp p-2">
+                <h2 class="exp-title regular-title text-main-color">
+                    Experience
+                    <a href="#"><i class="material-icons edit">edit</i></a>
+                </h2>
+                <div class="exp-item">
+                    <h3 class="company">TIBCO</h3>
+                    <div class="duration">
+                        <b>Duration : </b>
+                        July-17 to Current
+                    </div>
+                    <div class="position">
+                        <b>Position : </b>
+                        Consultant
+                    </div>
+                    <p class="description">
+                        <b>Description : </b>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Sed doloremque nesciunt, repellendus nostrum deleniti recusandae nobis neque modi perspiciatis similique?
+                    </p>
+                </div>
+
+                <div class="exp-item">
+                    <h3 class="company">Oracle</h3>
+                    <div class="duration">
+                        <b>Duration : </b>
+                        August-16 to July-17
+                    </div>
+                    <div class="position">
+                        <b>Position : </b>
+                        Associate Developer
+                    </div>
+                    <p class="description">
+                        <b>Description : </b>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Sed doloremque nesciunt, repellendus nostrum deleniti recusandae nobis neque modi perspiciatis similique?
+                    </p>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="profile-edu p-2">
+                <h2 class="edu-title regular-title text-main-color">
+                    Education
+                    <a href="#"><i class="material-icons edit">edit</i></a>
+                </h2>
+                <div class="edu-item">
+                    <h3 class="university">Mumbai University</h3>
+                    <div class="duration">
+                        <b>Duration : </b>
+                        July-17 to Current
+                    </div>
+                    <div class="degree">
+                        <b>Degree : </b>
+                        Bacholer Of Engineering
+                    </div>
+                    <div class="degree-type">
+                        <b>Field of Study : </b>
+                        Computer Engineering (CS)
+                    </div>
+                    <p class="description">
+                        <b>Description : </b>
+                        Completed BE in Computer Engineering in Ramrao Adik Institute Of Technology (RAIT), Nerul.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Github repos -->
+            <div class="profile-github p-2">
+                <h2 class="github-title regular-title text-main-color">GitHub Repos</h2>
+                <div class="github-item my-1">
+                    <div class="repo-details">
+                        <h4 class="repo-name">NodeJS_TaskManager_API</h4>
+                        <p class="repo-desc">
+                            Contains implementation of JWT, Email sending, File uploads, MongoDB Atlas (Cloud)
+                        </p>
+                    </div>
+                </div>
+
+                <div class="github-item my-1">
+                    <div class="repo-details">
+                        <h4 class="repo-name">Task-Mgr</h4>
+                        <p class="repo-desc">
+                            A FullStack app developed in ReactJs, NodeJs and MongoDB.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Projects tab -->
+    <section class="landing" id="projects">
+        <div class="">
+
+        </div>
+    </section>
+</body>
 </html>

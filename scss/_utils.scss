@@ -1,0 +1,186 @@
+/**
+* This file contains functions, mixins and css styles which can be reused in multiple pages.
+*/
+@function set-color($bgcolor) {
+    @if(lightness($bgcolor) > 60) {
+        @return $dark-color;
+    }@else {
+        @return $light-color;
+    }
+}
+@mixin set-bg-color($bgcolor) {
+    background-color: $bgcolor;
+    color: set-color($bgcolor);
+}
+
+$spaceamounts: (1,2,3,4,5);
+@each $space in $spaceamounts {
+    // all around margin
+    .m-#{$space} {
+        margin: #{$space}rem;
+    }
+    // vertical margin
+    .my-#{$space} {
+        margin: #{$space}rem 0;
+    }
+    // all around padding
+    .p-#{$space} {
+        padding: #{$space}rem;
+    }
+    // vertical padding
+    .py-#{$space} {
+        padding: #{$space}rem 0;
+    }
+}
+
+/**
+* Set background color and color based on passed bg-color.
+* Ex. <nav class="bg-dark">
+*/
+.bg {
+    &-main-color {
+        @include set-bg-color($main-color-bg)
+    }
+    &-primary {
+       @include set-bg-color($primary-color-bg);
+    }
+    &-light {
+        @include set-bg-color($light-color-bg);
+    }
+    &-dark {
+        @include set-bg-color($dark-color-bg);
+    }
+    &-danger {
+        @include set-bg-color($danger-color);
+    }
+    &-success {
+        @include set-bg-color($success-color);
+    }
+}
+
+/* block styles */
+.container {
+    max-width: $max-width;
+    margin: auto;
+    //margin-top: 6rem;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    padding: 0 2rem;
+
+}
+
+.form-container {
+    width: 100%;
+    max-width: 500px;
+    min-width: 350px;
+    margin: auto;
+}
+
+.dark-overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    //opacity: 0.7;
+}
+
+.round-img {
+    border-radius: 50%;
+}
+
+.horz-line {
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.15);
+    margin: 0.5rem;
+}
+
+/* text styles */
+.x-large {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.large {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.regular-title {
+    font-size: 1.5rem;
+}
+
+.lead {
+    font-size: 1.2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-main-color {
+    color: $main-color-bg;
+}
+
+.text-primary {
+    color: $primary-color;
+}
+
+/* alert styles */
+.alert {
+    display: none;  //block;
+    //width: max-content;
+    height: 2.5rem;
+    text-align: center;
+    padding: 0.5rem 0.3rem;
+    margin: 0.5rem 0;
+    border-radius: 3px;
+
+    &.alert-danger {
+        @include set-bg-color($danger-color);
+        border: 1.5px solid red;
+    }
+}
+
+/* page elements styles */
+.btn {
+    display: inline-block;
+    color: $dark-color;
+    background-color: $light-color-bg;
+    opacity: 0.9;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0 1rem 0 0;
+    padding: 0.4rem 1.3rem;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+        background: lighten($main-color-bg, 3%);
+        color: $light-color;
+        //border: 0.2px solid white;
+    }
+    &.btn-primary {
+        background-color: $main-color-bg;
+        color: $light-color;
+        height: 2.5rem;
+        border: none;
+
+        &:hover {
+            background: lighten($dark-color-bg, 15%);
+            color: $light-color;
+        }
+    }
+    &.btn-edit {
+        @include set-bg-color($dark-color-bg);
+        transition: all 0.2s ease-in;
+        &:hover {
+            @include set-bg-color($primary-color-bg);
+            border: 0.1px solid black;
+        }
+    }
+}

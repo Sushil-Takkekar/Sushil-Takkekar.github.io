@@ -1,0 +1,146 @@
+/**
+* This file contains functions, mixins and css styles specific to profile page.
+*/
+$profile-top-bg-color : rgb(96, 177, 98);
+$border-color-light-grey : 1px solid rgba(0, 0, 0, 0.21);
+
+@mixin set-box-styling($grid-area) {
+    grid-area: $grid-area;
+    border : $border-color-light-grey;
+    background-color: rgba(255, 255, 255, 0.32);
+}
+@mixin set-edit-btn() {
+    display: none;  // inline-block;
+    float: right;
+    margin-top: 0.3rem;
+    color: $main-color-bg;
+}
+
+.edit-profile-btn {
+    .edit {
+        display: none;  // inline-block;
+        float: right;
+        background-color: $dark-color-bg;
+        color: white;
+        padding: 0.5rem;
+        border-radius: 50%;
+    }
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-areas: 'top top' 'about about' 'exp edu' 'github github';
+    grid-gap: 1rem;
+
+    .profile-top {
+        @include set-box-styling(top);
+        padding: 1rem;
+        background-color: $profile-top-bg-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        text-align: center;
+
+        img {
+            margin-bottom: 1rem;
+            width: 25%;
+        }
+        .icons {
+            margin: 0.5rem 0;
+            img {
+                width: 2rem;
+                margin: 0 0.3rem;
+            }
+        }
+    }
+    .profile-about {
+        @include set-box-styling(about);
+        text-align: center;
+        
+        .skills-section {
+            .skills {
+                // display: flex;
+                // flex-direction: row;
+                // justify-content: center;
+                display: grid;
+                grid-template-columns: 2fr 2fr 2fr 2fr;
+                grid-gap: 0 4rem;
+                text-align: left;
+                padding: 0.5rem 2rem;
+            }
+            .skill-item {
+                margin: 0 0.5rem;
+                i {
+                    vertical-align: bottom;
+                    font-weight: bold;
+                }
+            }
+        }
+        .title {
+            padding: 0.5rem 0;
+        }
+    }
+    .profile-exp {
+        @include set-box-styling(exp);
+
+        .exp-title .edit {
+            @include set-edit-btn();
+        }
+
+        // for each div with class="exp-item"
+        & > .exp-item {
+            border-bottom: $border-color-light-grey;
+            padding: 0.5rem 0;
+
+            // remove border for last div with class="exp-item"
+            &:last-child {
+                border : none;
+            }
+
+            .company {
+                font-size: 1.3rem;
+                margin-bottom: 0.2rem;
+            }
+        }
+    }
+    .profile-edu {
+        @include set-box-styling(edu);
+
+        .edu-title .edit {
+            @include set-edit-btn();
+        }
+
+        // for each div with class="exp-item"
+        & > .edu-item {
+            border-bottom: $border-color-light-grey;
+            padding: 0.5rem 0;
+
+            // remove border for last div with class="exp-item"
+            &:last-child {
+                border : none;
+            }
+
+            .university {
+                font-size: 1.3rem;
+                margin-bottom: 0.2rem;
+            }
+        }
+    }
+    .profile-github {
+        @include set-box-styling(github);
+
+        .github-item {
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid #00000038;
+            padding: 1rem;
+            
+            &:hover {
+                cursor: pointer;
+                background-color: $profile-top-bg-color;
+                color: $light-color;
+            }
+        }
+    }
+}
