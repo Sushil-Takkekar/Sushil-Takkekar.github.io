@@ -1,0 +1,78 @@
+/**
+* This file contains functions, mixins and css styles specific to projects page.
+*/
+$projects-bg-color: #161c30;
+
+#projects {
+    background: none;
+    background-color: $projects-bg-color;
+    color: #fff;
+    margin-top: -7px;
+    padding: 4rem 8rem 0;
+}
+
+.proj-head {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.proj-list {
+    display: grid;
+    grid-template-areas: 'proj proj';
+    grid-gap: 3rem;
+
+    .proj {
+        grid-area: 'proj';
+        display: flex;
+        flex-direction: column;
+        //justify-content: center;
+        text-align: center;
+        //border: 1px solid black;
+        border-radius: 10px;
+        background-color: $projects-bg-color;
+        color: $primary-color-bg;
+        box-shadow: 0px 0px 7px 0px $primary-color-bg;
+
+        &:hover {
+            background-color: black;
+            opacity: 0.9;
+
+            .proj-btn-area {
+                display: inline-block;
+            }
+        }
+
+        .proj-img {
+            height: 35vh;
+    
+            img{
+                border-radius: 10px 10px 0px 0px;
+                height: 35vh;
+            }
+        }
+        .proj-title {
+            padding: 0.4rem 0.4rem 0.2rem;
+            font-size: 1.1rem;
+            border-top: 1px solid $primary-color-bg;
+        }
+        .proj-desc {
+            padding: 0.4rem;
+        }
+        .proj-btn-area {
+            display: inline-block;  // inline-block;
+            padding: 0.5rem;
+
+            .proj-btn {
+                border: 1px solid #e0e0e0;
+                border-radius: 0.2rem;
+                color: $primary-color-bg;
+                background-color: $projects-bg-color;
+                outline: none;
+
+                &:hover {
+                    background-color: #59627f;
+                }
+            }
+        }
+    }
+}

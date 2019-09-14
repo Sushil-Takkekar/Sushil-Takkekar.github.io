@@ -36,12 +36,26 @@
         <!-- <div class="dark-overlay"></div> -->
     </section>
 
+    <!-- wave -->
+    <svg viewBox="0 342 1366 130" style="background-color: inherit;">
+        <defs>
+          <!-- A copy of the curve part of the wave, which we will use to calculate
+               the correct position of the dot using getPointAtLength(). -->
+          <path id="wave-curve" d="M0,342c595,0,913,130,1366,130"/>
+        </defs>
+        <!-- SVGs are "overflow: visible" by default.
+             If we make this path extend vertically a long way, it will fill to the
+             top of the SVG no matter how high the page is. -->
+        <path id="wave" d="M0,342c595,0,913,130,1366,130 V -10000 H 0 Z" fill="#3d495d"/>
+    </svg>
+
     <!-- About tab -->
     <section id="about" class="container">
         <!-- <div class="edit-profile-btn">
             <a href="#" class="btn btn-edit">Get Resume</a>
         </div> -->
         <div id="top-margin"></div>
+
         <div class="profile-grid my-1">
             <!-- Top -->
             <div class="profile-top bg-main-color">
@@ -55,6 +69,7 @@
                     <a href="#"><img src="https://www.gstatic.com/images/icons/material/system/2x/post_gplus_black_24dp.png" /></a>
                 </div>
             </div>
+
             <!-- About -->
             <div class="profile-about bg-primary p-2">
                 <div class="bio-section">
@@ -186,10 +201,45 @@
         </div>
     </section>
 
+    <!-- wave -->
+    <svg viewBox="0 342 1366 130" style="background-color: #161c30;">
+        <defs>
+          <path id="wave-curve" d="M0,342c595,0,913,130,1366,130"/>
+        </defs>
+        <path id="wave" d="M0,342c595,0,913,130,1366,130 V -10000 H 0 Z" fill="#e0e0e0"/>
+    </svg>
+
     <!-- Projects tab -->
     <section class="landing" id="projects">
-        <div class="">
-
+        <!-- add spacing -->
+        <!-- <div id="top-margin"></div> -->
+        
+        <div class="proj-head">
+            Projects
+        </div>
+        <div class="proj-list">
+            <div class="proj">
+                <div class="proj-img">
+                    <img src="img/taskmgr.png" alt="Task-Mgr">
+                </div>
+                <div class="proj-title"><b>Task-Mgr</b></div>
+                <div class="proj-desc">Manage your daily tasks easily and efficiently.</div>
+                <div class="proj-btn-area">
+                    <button class="btn proj-btn" onclick="window.location.href='https://github.com/Sushil-Takkekar/Task-Mgr';">GitHub Code</button>
+                    <button class="btn proj-btn">Live app</button>
+                </div>
+            </div>
+            <div class="proj">
+                <div class="proj-img">
+                    <img src="img/codebot.png" alt="Codebot">
+                </div>
+                <div class="proj-title"><b>Codebot</b></div>
+                <div class="proj-desc">Code testing and monitoring engine.</div>
+                <div class="proj-btn-area">
+                    <button class="btn proj-btn">GitHub Code</button>
+                    <button class="btn proj-btn">Live app</button>
+                </div>
+            </div>
         </div>
     </section>
 </body>
