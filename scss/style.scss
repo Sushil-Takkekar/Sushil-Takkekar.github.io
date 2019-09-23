@@ -131,6 +131,39 @@ img {
     }
 }
 
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    //width: unset;
+    
+    .home-title {
+        display: block;
+        margin: 0rem 8rem;
+        color: #fff;
+        font-size: 3rem;
+        font-weight: bold;
+        width: 400px;
+        text-align: center;
+    }
+    .fs {
+        &-1 {
+            font-size: 3rem;
+            font-family: 'Vidaloka', serif;
+            letter-spacing: 0.1vw;
+        }
+        &-2 {
+            font-size: 1.5rem;
+            letter-spacing: 0.1vw;
+        }
+    }
+}
+
+.footer {
+    display: block;
+    padding: 1rem; 
+}
+
 /* margin between tabs */
 #top-margin {
     margin-top: 4rem;

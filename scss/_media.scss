@@ -48,10 +48,50 @@
             }
         }
     }
+
+    /* projects page */
+    .proj-list {
+        grid-gap: 2.5rem;
+    }
 }
 
 /**
 * Level - 2 
+**/
+@media (max-width: 1080px) {
+    /* home page */
+    .home {
+        .home-title {
+            margin: 0rem 3rem;
+        }
+        .fs-2 {
+            margin: 0rem 3rem 10rem;
+        }
+    }
+
+    /* projects page */
+    #projects {
+        margin-top: -8px;
+        padding: 4rem 15rem 3rem;
+        .proj-list {
+            grid-template-areas: 'proj';
+            grid-gap: 2.5rem;
+            .proj {
+                .proj-img {
+                    height: 40vh;
+                    img {
+                        height: 40vh;
+                    }
+                }
+            }
+            
+        }
+        
+    }
+}
+
+/**
+* Level - 3
 **/
 @media (max-width: 900px) {
     /* DO NOT SHOW Dashboard below 900px */
@@ -64,7 +104,7 @@
 }
 
 /**
-* Level - 3
+* Level - 4
 **/
 @media (max-width: 750px) {
     /* change vars */
@@ -127,6 +167,49 @@
         }
         .profile-edu > .edu-item .university {
             font-size: 1.2rem;
+        }
+    }
+
+    /* home page */
+    .home {
+        width: fit-content;
+        .fs {
+            &-1 {
+                font-size: 2rem;
+                font-family: 'Vidaloka', serif;
+                letter-spacing: 0.1vw;
+                margin: 0rem 0rem;
+            }
+            &-2 {
+                font-size: 1.5rem;
+                letter-spacing: 0.1vw;
+                margin: 0rem 0rem;
+            }
+        }
+    }
+
+    /* projects page */
+    #projects {
+        font-size: 12px;
+        margin-top: -8px;
+        padding: 4rem 3rem 3rem;
+        .proj-list {
+            grid-template-areas: 'proj';
+            //grid-gap: 2.5rem;
+            .proj {
+                .proj-title b {
+                    font-size: 14px;
+                }
+                .proj-img {
+                    height: 20vh;
+                    img {
+                        height: 20vh;
+                    }
+                }
+                .proj-btn-area .btn {
+                    font-size: 0.7rem;
+                }
+            }   
         }
     }
 }

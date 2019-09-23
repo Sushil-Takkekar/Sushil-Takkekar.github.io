@@ -8,7 +8,8 @@ $projects-bg-color: #161c30;
     background-color: $projects-bg-color;
     color: #fff;
     margin-top: -7px;
-    padding: 4rem 8rem 0;
+    padding: 4rem 8rem 3rem;
+    height: initial;
 }
 
 .proj-head {
@@ -19,7 +20,7 @@ $projects-bg-color: #161c30;
 .proj-list {
     display: grid;
     grid-template-areas: 'proj proj';
-    grid-gap: 3rem;
+    grid-gap: 5rem;
 
     .proj {
         grid-area: 'proj';
